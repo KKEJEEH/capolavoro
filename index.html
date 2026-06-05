@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>La Mia Passione - La Velocità</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+}
+
+body{
+font-family:'Poppins',sans-serif;
+background:#0b0b0b;
+color:white;
+overflow-x:hidden;
+}
+
+nav{
+position:fixed;
+top:0;
+width:100%;
+background:rgba(0,0,0,.9);
+backdrop-filter:blur(10px);
+padding:20px;
+display:flex;
+justify-content:center;
+gap:30px;
+z-index:1000;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+font-weight:600;
+transition:.3s;
+}
+
+nav a:hover{
+color:#ff4040;
+}
+
+header{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+background:
+linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.8)),
+url("https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=1800&q=80");
+background-size:cover;
+background-position:center;
+}
+
+.hero{
+max-width:900px;
+animation:fadeUp 1.5s ease;
+}
+
+.hero h1{
+font-size:4rem;
+color:#ff4040;
+margin-bottom:20px;
+}
+
+.hero p{
+font-size:1.3rem;
+margin-bottom:30px;
+}
+
+.btn{
+display:inline-block;
+padding:15px 35px;
+background:#ff4040;
+color:white;
+text-decoration:none;
+border-radius:10px;
+font-weight:bold;
+transition:.3s;
+}
+
+.btn:hover{
+transform:translateY(-3px);
+background:#ff2020;
+}
+
+section{
+padding:100px 10%;
+max-width:1200px;
+margin:auto;
+}
+
+.section-title{
+font-size:2.5rem;
+margin-bottom:40px;
+color:#ff4040;
+text-align:center;
+}
+
+.card{
+background:#151515;
+padding:35px;
+border-radius:20px;
+box-shadow:0 0 25px rgba(255,0,0,.15);
+}
+
+.card p{
+margin-bottom:15px;
+}
+
+.stats{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.stat{
+background:#151515;
+padding:40px;
+text-align:center;
+border-radius:15px;
+}
+
+.number{
+font-size:3rem;
+color:#ff4040;
+font-weight:800;
+}
+
+.timeline{
+position:relative;
+margin-top:40px;
+}
+
+.timeline::before{
+content:"";
+position:absolute;
+left:20px;
+top:0;
+width:4px;
+height:100%;
+background:#ff4040;
+}
+
+.timeline-item{
+padding-left:60px;
+margin-bottom:40px;
+position:relative;
+}
+
+.timeline-item::before{
+content:"";
+position:absolute;
+left:11px;
+top:10px;
+width:20px;
+height:20px;
+border-radius:50%;
+background:#ff4040;
+}
+
+.quote{
+padding:120px 10%;
+text-align:center;
+font-size:2rem;
+font-style:italic;
+background:#111;
+color:#ffd700;
+}
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:20px;
+}
+
+.gallery img{
+width:100%;
+height:280px;
+object-fit:cover;
+border-radius:15px;
+transition:.4s;
+}
+
+.gallery img:hover{
+transform:scale(1.05);
+}
+
+.values{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.value{
+background:#151515;
+padding:25px;
+border-radius:15px;
+}
+
+.value h3{
+color:#ff4040;
+margin-bottom:10px;
+}
+
+footer{
+text-align:center;
+padding:60px 20px;
+background:black;
+}
+
+footer h2{
+color:#ff4040;
+margin-bottom:15px;
+}
+
+.hidden{
+opacity:0;
+transform:translateY(50px);
+transition:1s;
+}
+
+.show{
+opacity:1;
+transform:translateY(0);
+}
+
+@keyframes fadeUp{
+from{
+opacity:0;
+transform:translateY(50px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:2.5rem;
+}
+
+.hero p{
+font-size:1rem;
+}
+
+nav{
+gap:15px;
+font-size:.8rem;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<nav>
+<a href="#chi">Chi Sono</a>
+<a href="#passione">Passione</a>
+<a href="#storia">Percorso</a>
+<a href="#sogno">Futuro</a>
+<a href="#contatti">Finale</a>
+</nav>
+
+<header>
+
+<div class="hero">
+
+<h1>La Velocità: Il Mio Presente e Il Mio Futuro</h1>
+
+<p>
+Non sono ancora nessuno.
+Non ho ancora raggiunto i miei obiettivi più grandi.
+Ma questa è la mia passione.
+Ogni allenamento, ogni sacrificio e ogni gara mi stanno aiutando
+a costruire la persona che voglio diventare.
+</p>
+
+<a href="#chi" class="btn">Scopri la mia storia</a>
+
+</div>
+
+</header>
+
+<section id="chi" class="hidden">
+
+<h2 class="section-title">Chi Sono</h2>
+
+<div class="card">
+
+<p>
+Mi chiamo INSERISCI IL TUO NOME.
+Sono uno studente e un atleta con una grande passione per la velocità.
+</p>
+
+<p>
+Quando corro mi sento libero.
+Ogni allenamento rappresenta una nuova occasione per migliorarmi.
+La pista mi ha insegnato che il talento da solo non basta:
+servono impegno, costanza e determinazione.
+</p>
+
+<p>
+L'atletica è diventata una parte fondamentale della mia vita.
+Mi ha aiutato a crescere come atleta ma soprattutto come persona.
+</p>
+
+</div>
+
+</section>
+
+<section id="passione" class="hidden">
+
+<h2 class="section-title">La Mia Passione</h2>
+
+<div class="card">
+
+<p>
+All'inizio era semplice curiosità.
+Volevo mettermi alla prova e scoprire un nuovo sport.
+Con il tempo però ho capito che la velocità era qualcosa di speciale.
+</p>
+
+<p>
+L'adrenalina della partenza, la concentrazione prima dello sparo,
+la sensazione di dare tutto fino al traguardo:
+sono emozioni che non riesco a trovare altrove.
+</p>
+
+<p>
+Per me la velocità non significa soltanto correre forte.
+Significa imparare a superare i propri limiti ogni giorno.
+</p>
+
+</div>
+
+</section>
+
+<section class="hidden">
+
+<h2 class="section-title">Le Mie Emozioni</h2>
+
+<div class="card">
+
+<p>
+Quando sono sui blocchi di partenza il tempo sembra fermarsi.
+Il cuore accelera.
+Penso a tutti gli allenamenti fatti per arrivare fino a quel momento.
+</p>
+
+<p>
+Poi arriva il via.
+Per pochi secondi esistono solo la pista e il traguardo.
+In quei momenti capisco perché amo questo sport.
+</p>
+
+<p>
+La velocità mi fa sentire vivo.
+Mi insegna a non arrendermi e a dare sempre il massimo.
+</p>
+
+</div>
+
+</section>
+
+<section class="hidden">
+
+<h2 class="section-title">I Miei Numeri</h2>
+
+<div class="stats">
+
+<div class="stat">
+<div class="number">100%</div>
+<h3>Passione</h3>
+</div>
+
+<div class="stat">
+<div class="number">∞</div>
+<h3>Determinazione</h3>
+</div>
+
+<div class="stat">
+<div class="number">365</div>
+<h3>Giorni per Migliorare</h3>
+</div>
+
+</div>
+
+</section>
+
+<section id="storia" class="hidden">
+
+<h2 class="section-title">Il Mio Percorso</h2>
+
+<div class="timeline">
+
+<div class="timeline-item">
+<h3>Inizio</h3>
+<p>Scopro l'atletica e nasce la mia passione.</p>
+</div>
+
+<div class="timeline-item">
+<h3>Allenamenti</h3>
+<p>Inizio a lavorare seriamente sulla velocità.</p>
+</div>
+
+<div class="timeline-item">
+<h3>Crescita</h3>
+<p>Miglioro la tecnica, la mentalità e la disciplina.</p>
+</div>
+
+<div class="timeline-item">
+<h3>Oggi</h3>
+<p>Continuo a inseguire i miei obiettivi con determinazione.</p>
+</div>
+
+<div class="timeline-item">
+<h3>Domani</h3>
+<p>Voglio diventare atleta e allenatore.</p>
+</div>
+
+</div>
+
+</section>
+
+<div class="quote">
+"Il successo non è non cadere mai, ma rialzarsi ogni volta più forte."
+</div>
+
+<section class="hidden">
+
+<h2 class="section-title">Le Difficoltà</h2>
+
+<div class="card">
+
+<p>
+Ci sono state gare difficili, allenamenti pesanti e momenti di delusione.
+A volte i risultati non arrivano subito.
+</p>
+
+<p>
+Ma proprio nei momenti più difficili ho imparato qualcosa di importante:
+il fallimento non è la fine del percorso.
+È una lezione che aiuta a crescere.
+</p>
+
+<p>
+Ogni ostacolo mi ha reso più forte e più determinato.
+</p>
+
+</div>
+
+</section>
+
+<section id="sogno" class="hidden">
+
+<h2 class="section-title">Il Mio Sogno</h2>
+
+<div class="card">
+
+<p>
+Oggi il mio obiettivo è diventare il miglior atleta possibile.
+Voglio scoprire fino a dove posso arrivare grazie all'impegno e alla costanza.
+</p>
+
+<p>
+Ma il mio sogno non finisce qui.
+</p>
+
+<p>
+Un giorno voglio diventare allenatore specializzato nella velocità.
+Voglio aiutare altri ragazzi a migliorare, a credere nelle proprie capacità e a raggiungere i loro obiettivi.
+</p>
+
+<p>
+Vorrei trasmettere la stessa passione che io provo ogni volta che entro in pista.
+</p>
+
+<p>
+Per me allenare non significa soltanto preparare esercizi.
+Significa motivare, insegnare e aiutare qualcuno a credere in sé stesso.
+</p>
+
+</div>
+
+</section>
+
+<section class="hidden">
+
+<h2 class="section-title">Se Non Diventerò Un Grande Atleta?</h2>
+
+<div class="card">
+
+<p>
+Nessuno conosce il futuro.
+Forse riuscirò a raggiungere grandi risultati.
+Forse no.
+</p>
+
+<p>
+Ma questo non cambierà la mia passione.
+</p>
+
+<p>
+Perché la velocità farà sempre parte della mia vita.
+Anche se non diventerò l'atleta che sogno di essere,
+continuerò a vivere questo mondo come allenatore.
+</p>
+
+<p>
+Magari un giorno sarò io ad allenare il prossimo campione.
+</p>
+
+</div>
+
+</section>
+
+<section class="hidden">
+
+<h2 class="section-title">I Valori Che Ho Imparato</h2>
+
+<div class="values">
+
+<div class="value">
+<h3>Costanza</h3>
+<p>Continuare a lavorare anche quando è difficile.</p>
+</div>
+
+<div class="value">
+<h3>Disciplina</h3>
+<p>Fare ciò che serve per migliorare.</p>
+</div>
+
+<div class="value">
+<h3>Determinazione</h3>
+<p>Non arrendersi davanti agli ostacoli.</p>
+</div>
+
+<div class="value">
+<h3>Rispetto</h3>
+<p>Per gli altri e per sé stessi.</p>
+</div>
+
+<div class="value">
+<h3>Passione</h3>
+<p>La forza che mi spinge a continuare.</p>
+</div>
+
+<div class="value">
+<h3>Coraggio</h3>
+<p>Affrontare nuove sfide senza paura.</p>
+</div>
+
+</div>
+
+</section>
+
+<section class="hidden">
+
+<h2 class="section-title">Galleria</h2>
+
+<div class="gallery">
+
+<img src="https://images.unsplash.com/photo-1461896836934-ffe607ba8211?auto=format&fit=crop&w=800&q=80">
+<img src="https://images.unsplash.com/photo-1552674605-db6ffd4facb5?auto=format&fit=crop&w=800&q=80">
+<img src="https://images.unsplash.com/photo-1517649763962-0c623066013b?auto=format&fit=crop&w=800&q=80">
+
+</div>
+
+</section>
+
+<footer id="contatti">
+
+<h2>Il Mio Messaggio Finale</h2>
+
+<p>
+Questo sito non racconta la storia di un campione.
+Racconta la storia di un ragazzo che ha trovato una passione.
+</p>
+
+<br>
+
+<p>
+Non so dove sarò tra dieci anni.
+Non so se diventerò un grande atleta.
+</p>
+
+<br>
+
+<p>
+Ma so che continuerò a dare il massimo.
+Continuerò a imparare.
+Continuerò a vivere la velocità.
+Come atleta oppure come allenatore.
+</p>
+
+<br>
+
+<p>
+Perché alcune passioni non finiscono mai.
+</p>
+
+</footer>
+
+<script>
+
+const hiddenElements = document.querySelectorAll('.hidden');
+
+const observer = new IntersectionObserver(entries => {
+
+entries.forEach(entry => {
+
+if(entry.isIntersecting){
+entry.target.classList.add('show');
+}
+
+});
+
+});
+
+hiddenElements.forEach(el => observer.observe(el));
+
+</script>
+
+</body>
+</html>
